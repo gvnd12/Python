@@ -114,3 +114,58 @@
 #         print("2nd number is the largest")
 #     else:
 #         print("3rd number is the largest")
+
+
+
+# #While loop
+# #Check for Prime
+# num=int(input("Enter number to be checked: "))
+# i=2
+# if num!=1:
+#     while num>i:
+#         if num%i==0:
+#             print("Number is not prime")
+#             break
+#         i+=1
+#     else:
+#         print("Number is prime")
+# else:
+#     print("The entered number is 1, which is neither prime nor composite")
+
+
+
+# #Factorial
+# n=int(input("Enter the number whose factorial is to be found: "))
+# num=1
+# while n>=1:
+#     num=n*num
+#     n-=1
+# print(num)
+
+
+
+#Palindrome
+# num=int(input("Enter a number to check if it is palindrome: "))
+# z=num
+# a=0
+# n=0
+# while num>0:
+#     n=num%10
+#     a=a*10+n
+#     num//=10
+# if z==a:
+#     print("Number is a palindrome")
+# else:
+#     print("Number is not a palindrome")
+
+
+
+# #Reverse of a number
+# num=int(input("Enter a number to be reversed: "))
+# a=0
+# n=0
+# while num>0:
+#     n=num%10
+#     a=a*10+n
+#     num//=10
+# print("The reverse of the number is:",a)
