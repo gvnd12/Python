@@ -169,3 +169,169 @@
 #     a=a*10+n
 #     num//=10
 # print("The reverse of the number is:",a)
+
+
+
+# #Amstrong number
+# num=int(input("Enter the number to be checked: "))
+# x=num
+# z=num
+# ams=0
+# n=0
+# count=0
+
+# while num>0:
+#     count+=1
+#     num//=10
+
+# while x>0:
+#     n=x%10
+#     ams=ams+n**count
+#     x//=10
+
+# if z==ams:
+#     print("The entered number is amstrong number")
+# else:
+#     print("The entered number is not amstrong number")
+
+
+
+# #For loop
+# #Print * pyramid
+# n=int(input("Enter number of rows to print the pattern: "))
+# for i in range(n+1):
+#     for j in range(i):
+#         print('*',end=' ')
+#     print()
+
+
+# #Print inverted * pyramid 
+# n=int(input("Enter number of rows to print the pattern: "))
+# for i in range(n+1):
+#     for j in range(n-i):
+#         print('*',end='')
+#     print()
+
+
+
+# #Print number pyramid
+# n=int(input("Enter number of rows to print the pattern: "))
+# for i in range(n+1):
+#     for j in range(1,i+1):
+#         print(j,end=' ')
+#     print()
+
+
+
+# # Print inverted number pyramid
+# n=int(input("Enter number of rows to print the pattern: "))
+# for i in range(n+1):
+#     for j in range(1,n-(i-1)):
+#         print(j,end=' ')
+#     print()
+
+
+# #Print same number in all rows pyramid
+# n=int(input("Enter number of rows to print the pattern: "))
+# for i in range(n+1):
+#     for j in range(i):
+#         print(n,end=' ')
+#     print()
+
+
+# #Print one number in each row pyramid
+# n=int(input("Enter number of rows to print the pattern: "))
+# for i in range(1,n+1):
+#     num=i
+#     for j in range(1,i+1):
+#         print(num,end='')
+#     print()
+
+
+
+# #Print one number in each row pyramid inverted
+# n=int(input("Enter number of rows to print the pattern: "))
+# for i in range(n,0,-1):
+#     num=i
+#     for j in range(n-i):
+#         print(num,end='')
+#     print()
+
+
+# #Display prime numbers in a imit
+# n=int(input("Enter the limit: "))
+# for i in range(2,n+1):
+#     for j in range(2,i):
+#         if i%j==0:
+#             break
+#     else:
+#         print(i)
+
+
+# #Reverse a string
+# org_str=input("Enter a string: ")
+# rev_str=''
+# for i in org_str:
+#     rev_str=i+rev_str
+# print(rev_str)
+
+
+
+# s1=input("Enter first string: ")
+# s2=input("Enter second string: ")
+# ms1=len(s1)//2
+# ms2=len(s2)//2
+# new_s=s1[0]+s2[0]+s1[ms1]+s2[ms2]+s1[-1]+s2[-1]
+# print(new_s)
+
+
+
+# s=input("Enter a string: ")
+# upper=0
+# lower=0
+# special=0
+# digit=0
+# for i in s:
+#     if i.isupper():
+#         upper+=1
+#     elif i.islower():
+#         lower+=1
+#     elif i.isdigit():
+#         digit+=1
+#     else:
+#         special+=1
+# print("Uppercase=",upper)
+# print("Lowercase=",lower)
+# print("Digit=",digit)
+# print("Special character=",special)
+
+
+
+# s1=input("Enter first string: ")
+# s2=input("Enter second string: ")
+# max_len=max(len(s1),len(s2))
+# mix_str=''
+# for i in range(max_len):
+#     if i<len(s1):
+#         mix_str+=s1[i]
+#     if i<len(s2):
+#         mix_str+=s2[-i-1]
+# print("Mixed string=",mix_str)
+
+
+
+# s1=input("Enter the string: ")
+# s2=input("Enter the substring: ")
+# f=s1.find(s2)
+# if f>=0:
+#     print("Substring is found at index",f)
+# else:
+#     print("Substring not found")
+
+
+
+# str=input("Enter a string: ")
+# if str.endswith('ing') and len(str)>3:
+#         print(str+'ly')
+# else:
+#     print(str+"ing")
