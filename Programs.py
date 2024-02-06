@@ -277,6 +277,9 @@
 
 
 
+# #Given 2 strings, s1, and s2 return a new string made of the first, middle and last characters each input string
+# #A=abcde  B=uvwxyz   Out­­­­=> aucxez
+
 # s1=input("Enter first string: ")
 # s2=input("Enter second string: ")
 # ms1=len(s1)//2
@@ -286,6 +289,7 @@
 
 
 
+# #Count all lower case, upper case, digits, and special symbols from a given string
 # s=input("Enter a string: ")
 # upper=0
 # lower=0
@@ -307,6 +311,10 @@
 
 
 
+# #Given two strings, s1 and s2, create a mixed String
+# #s1 = "Abc"
+# #s2 = "Xyz"
+# #Out => AzbycX
 # s1=input("Enter first string: ")
 # s2=input("Enter second string: ")
 # max_len=max(len(s1),len(s2))
@@ -320,6 +328,7 @@
 
 
 
+# #Find the index of the first occurrence of a substring in a string
 # s1=input("Enter the string: ")
 # s2=input("Enter the substring: ")
 # f=s1.find(s2)
@@ -330,8 +339,17 @@
 
 
 
+# #Write a Python program to add 'ing' at the end of a given string
+# #If the given string already ends with 'ing' then add 'ly' instead.
 # str=input("Enter a string: ")
 # if str.endswith('ing') and len(str)>3:
 #         print(str+'ly')
 # else:
 #     print(str+"ing")
+
+
+# #Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$'
+# str=input("Enter a string: ")
+# strf=input("Enter the character to be replaced wiht $: ")
+# newstr=str[0]+str[1:].replace(strf,'$')
+# print(newstr)
