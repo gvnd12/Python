@@ -179,16 +179,13 @@
 # ams=0
 # n=0
 # count=0
-
 # while num>0:
 #     count+=1
 #     num//=10
-
 # while x>0:
 #     n=x%10
 #     ams=ams+n**count
 #     x//=10
-
 # if z==ams:
 #     print("The entered number is amstrong number")
 # else:
@@ -203,6 +200,7 @@
 #     for j in range(i):
 #         print('*',end=' ')
 #     print()
+
 
 
 # #Print inverted * pyramid 
@@ -231,12 +229,14 @@
 #     print()
 
 
+
 # #Print same number in all rows pyramid
 # n=int(input("Enter number of rows to print the pattern: "))
 # for i in range(n+1):
 #     for j in range(i):
 #         print(n,end=' ')
 #     print()
+
 
 
 # #Print one number in each row pyramid
@@ -258,6 +258,7 @@
 #     print()
 
 
+
 # #Display prime numbers in a imit
 # n=int(input("Enter the limit: "))
 # for i in range(2,n+1):
@@ -266,6 +267,7 @@
 #             break
 #     else:
 #         print(i)
+
 
 
 # #Reverse a string
@@ -348,8 +350,262 @@
 #     print(str+"ing")
 
 
+
 # #Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$'
 # str=input("Enter a string: ")
-# strf=input("Enter the character to be replaced wiht $: ")
-# newstr=str[0]+str[1:].replace(strf,'$')
+# newstr=str[0]+str[1:].replace(str[0],'$')
 # print(newstr)
+
+
+
+# #Reverse the order of the words in the given string
+# str=input("Enter a string: ")
+# x=str.split(' ')
+# newstr=''
+# for i in x:
+#     newstr=i+' '+newstr
+# print('The reversed string is:',newstr)
+
+
+
+# #Count vowels and consonants in a string
+# str=input("Enter a string: ")
+# countv=0
+# countc=0
+# for i in str:
+#     if i in ['a','e','i','o','u','A','E','I','O','U']:
+#         countv+=1
+#     else:
+#         countc+=1
+# print('Vowels=',countv)
+# print('Consonants=',countc)
+
+
+
+# #Remove duplicates in a string
+# str=input("Enter a string: ")
+# newstr=''
+# for i in str:
+#     if i not in newstr:
+#         newstr=newstr+i
+# print(newstr)
+
+
+
+# #Count the number of letters in a word using loop
+# str=input("Enter a string: ")
+# count=0
+# for i in str:
+#     if i.isalpha():
+#         count+=1
+# print("The number of letters in the word =",count)
+
+
+
+# #Convert lower letter to upper and upper letter to lower in a string
+# str=input("Enter a string: ")
+# newstr=''
+# for i in str:
+#     if i.islower():
+#         newstr+=i.upper()
+#     elif i.isupper():
+#         newstr+=i.lower()
+# print(newstr)
+
+
+
+# #Program to sort letters of word by lower to upper case format
+# str=input("Enter a string: ")
+# lower=''
+# upper=''
+# for i in str:
+#     if i.islower():
+#         lower+=i
+#     elif i.isupper():
+#         upper+=i
+# print("Lowercase letters are:",lower)
+# print("Uppercase letters are:",upper)
+
+
+
+#Convert all the starting letter of a word in a string
+# s=input("Enter a string: ")
+# ns=s.split(' ')
+# for i in ns:
+#     a=i[0].swapcase()+i[1:]
+#     print(a,end=' ')
+
+
+
+#Input list with loop
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=input("Enter element of array: ")
+#     x.append(arr)
+# print(x)
+
+
+
+#Sum of elements of list with loop
+# a=int(input("Enter size of array: "))
+# arr=[]
+# sum=0
+# for i in range(a):
+#     e=int(input("Enter element of array: "))
+#     arr.append(e)
+# for i in arr:
+#     sum+=i
+# print("Sum of elements of the list is:",sum)
+
+
+
+#Reverse elements of a list
+# a=int(input("Enter size of array: "))
+# arr=[]
+# x=[]
+# for i in range(a):
+#     e=input("Enter element of array: ")
+#     arr.append(e)
+# x=arr[::-1]
+# print(x)
+
+
+
+# Largest element of a list with loop
+# a=int(input("Enter size of array: "))
+# arr=[]
+# sum=0
+# for i in range(a):
+#     e=int(input("Enter element of array: "))
+#     arr.append(e)
+# for i  in arr:
+#     for j in arr:
+#         if j>i:
+#             big=j
+# print("Largest element in the list is:",big)
+
+
+
+#Reverse an element in  a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# revword=''
+# for i in range(a):
+#     arr=input("Enter element of array: ")
+#     x.append(arr)
+# index=int(input("Enter the position of word to be reversed: "))
+# for i in x[index-1]:
+#         revword=i+revword
+# print(revword)
+
+
+
+#Sum of corresponding elements of 2 lists
+# a=int(input("Enter size of array: "))
+# print()
+# x=[]
+# y=[]
+# res=[]
+# for i in range(a):
+#     arr1=int(input("Enter elements of 1st array: "))
+#     x.append(arr1)
+# print()
+# for i in range(a):
+#     arr2=int(input("Enter elements of 2nd array: "))
+#     y.append(arr2)
+# print()
+# for i in range(a):
+#     res.append(x[i]+y[i])
+# print("Sum of corresponding elements of both lists is:",res)
+
+
+
+#Sorting positive and negative elements in a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# pos=[]
+# neg=[]
+# for i in range(a):
+#     arr=int(input("Enter element of array: "))
+#     x.append(arr)
+# for i in x:
+#     if i<0:
+#         neg.append(i)
+#     elif i>=0:
+#         pos.append(i)
+# print("Positive elements of the array:",pos)
+# print("Negative elements of the array:",neg)
+
+
+
+# Sorting even and odd elements in a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# odd=[]
+# even=[]
+# for i in range(a):
+#     arr=int(input("Enter element of array: "))
+#     x.append(arr)
+# for i in x:
+#     if i%2==0:
+#         even.append(i)
+#     else:
+#         odd.append(i)
+# print("Even elements of the array:",even)
+# print("Odd elements of the array:",odd)
+
+
+
+#Sorting positive and negative elements from a list within a range
+# a=int(input("Enter size of array: "))
+# x=[]
+# pos=[]
+# neg=[]
+# for i in range(a):
+#     arr=int(input("Enter element of array: "))
+#     x.append(arr)
+# rb=int(input("Enter range beginning to be searched: "))
+# re=int(input("Enter range end to be searched: "))
+# for i in x[rb:re]:
+#     if i<0:
+#         neg.append(i)
+#     elif i>=0:
+#         pos.append(i)
+# print("Positive elements of the array:",pos)
+# print("Negative elements of the array:",neg)
+
+
+
+#Remove duplicate elements in a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# y=[]
+# for i in range(a):
+#     arr=input("Enter element of array: ")
+#     x.append(arr)
+# for i in x:
+#     for j in x:
+#         if j not in y:
+#             y.append(j)
+# print("The list after removing duplicate elements is:",y)
+
+
+
+#Search an element in a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=input("Enter element of array: ")
+#     x.append(arr)
+# s=input("Enter element to search: ")
+# for i in x:
+#     if i==s:
+#         res=True
+#         break
+#     elif i!=s:
+#         res=False
+# if res==True:
+#     print("Element found in the list")
+# else:
+#     print("Element not found in the list")
