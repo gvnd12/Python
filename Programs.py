@@ -476,14 +476,14 @@
 # a=int(input("Enter size of array: "))
 # arr=[]
 # sum=0
+# big=0
 # for i in range(a):
 #     e=int(input("Enter element of array: "))
 #     arr.append(e)
 # for i  in arr:
-#     for j in arr:
-#         if j>i:
-#             big=j
-# print("Largest element in the list is:",big)
+#     if i>big:
+#         big=i
+# print(big)
 
 
 
@@ -497,7 +497,7 @@
 # index=int(input("Enter the position of word to be reversed: "))
 # for i in x[index-1]:
 #         revword=i+revword
-# print(revword)
+# print("Reversed word is:",revword)
 
 
 
@@ -609,3 +609,88 @@
 #     print("Element found in the list")
 # else:
 #     print("Element not found in the list")
+
+
+
+#Find the missing number from a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=int(input("Enter element of array: "))
+#     x.append(arr)
+# for i in range(1,len(x)):
+#     if x[i]-1!=x[i-1]:
+#         val=x[i]-1
+#         break
+# print("Missing element is:",val)
+
+
+
+#Find second largest number in a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=int(input("Enter element of array: "))
+#     x.append(arr)
+# big=x[0]
+# for i in range(a):
+#     for j in range(a-i-1):
+#         if x[j]<x[j+1]:
+#             x[j],x[j+1]=x[j+1],x[j]
+# print("Second largest number in the list is:",x[1])
+
+
+
+#Find second smallest number in a list
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=int(input("Enter element of array: "))
+#     x.append(arr)
+# big=x[0]
+# for i in range(a):
+#     for j in range(a-i-1):
+#         if x[j]<x[j+1]:
+#             x[j],x[j+1]=x[j+1],x[j]
+# print("Second smallest number in the list is:",x[-2])
+
+
+
+#Convert integer to word
+# num=['zero','one','two','three','four','five','six','seven','eight','nine']
+# teen=['ten','eleven','twelve','thirteen','forteen','fifteen','sixteen','seventeen','eighteen','nineteen']
+# tens=['','','twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety']
+# a=input("Enter a number in the range of 0-99: ")
+# if a.isnumeric():
+#     if 0<=a<10:
+#         print("Entered number is:",num[a])
+#     elif 10<=a<20:
+#         print("Entered number is:",teen[a//10])
+#     elif 20<=a<100:
+#         print("Entered number is:",tens[a//10]+'-'+num[a%10])
+#     elif a>100 or a<0:
+#         print("Entered number is out of range")
+# else:
+#     print("Entered value is not a number")
+
+
+
+#Count no of strings from a given list of strings with length two or more characters and first and last character as same
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=input("Enter element of array: ")
+#     x.append(arr)
+# count=0
+# for i in x:
+#     if len(i)>=2:
+#         if i[0]==i[-1]:
+#             count+=1
+#     else:
+#         print("The element at position",x.index(i)+1,"has length less than 2")
+#         yn=input("Do you want to continue excluding this value? (Y/N): ")
+#         if yn=='y' or 'Y':
+#             continue
+#         else:
+#             exit()
+# print("No of elements with length greater than 2 and same first and last character is:",count)
