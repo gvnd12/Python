@@ -259,7 +259,7 @@
 
 
 
-# #Display prime numbers in a imit
+# #Display prime numbers in a limit
 # n=int(input("Enter the limit: "))
 # for i in range(2,n+1):
 #     for j in range(2,i):
@@ -694,3 +694,796 @@
 #         else:
 #             exit()
 # print("No of elements with length greater than 2 and same first and last character is:",count)
+
+
+
+#2D matrix input with for loop
+# mat=[]
+# r=int(input("Enter number of rows: "))
+# c=int(input("Enter number of columns: "))
+# print("Enter values row-wise")
+# for i in range(r):
+#     a=[]
+#     for j in range(c):
+#         a.append(int(input()))
+#     mat.append(a)
+# print()
+# #                                                   ------To display matrix------
+# print('Entered matrix is: ')
+# for i in range(r):
+#     for j in range(c):
+#         print(mat[i][j],end=' ')
+#     print()
+
+
+
+#2D matrix addition
+# mat1=[]
+# mat2=[]
+# add=[]
+# r=int(input("Enter number of rows: "))
+# c=int(input("Enter number of columns: "))
+# print("Enter values of first matrix row-wise")
+# for i in range(r):
+#     a=[]
+#     for j in range(c):
+#         a.append(int(input()))
+#     mat1.append(a)
+# print("Enter values of second matrix row-wise")
+# for i in range(r):
+#     a=[]
+#     for j in range(c):
+#         a.append(int(input()))
+#     mat2.append(a)
+# for i in range(r):
+#     add.append([0]*c)
+# for i in range(r):
+#     for j in range(c):
+#         add[i][j]=mat1[i][j]+mat2[i][j]
+# print('Sum of the matrix is: ')
+# for i in range(r):
+#     for j in range(c):
+#         print(add[i][j],end=' ')
+#     print()
+
+
+
+#2D matrix transpose
+# mat=[]
+# t=[]
+# r=int(input("Enter the number of rows: "))
+# c=int(input("Enter the number of columns: "))
+# for i in range(r):
+#     a=[]
+#     for j in range(c):
+#         a.append(int(input()))
+#     mat.append(a)
+# print('Entered matrix is: ')
+# for i in range(r):
+#     for j in range(c):
+#         print(mat[i][j],end=' ')
+#     print()
+# for i in range(r):
+#     t.append([0]*c)
+# for i in range(r):
+#     for j in range(c):
+#         t[j][i]=mat[i][j]
+# print('Transpose of the matrix is: ')
+# for i in range(r):
+#     for j in range(c):
+#         print(t[i][j],end=' ')
+#     print()
+
+
+
+#Simple calculator
+# while True:
+#     print("Options")
+#     print('1.Addition')
+#     print('2.Subtraction')
+#     print('3.Multiplication')
+#     print('4.Division')
+#     print('5.EXIT')
+#     choice=int(input("Enter your choice: "))
+#     if choice==5:
+#         print('Exiting the program')
+#         break
+#     elif 1<=choice<=4:
+#         fst=int(input("Enter first number: "))
+#         snd=int(input("Enter second number: "))
+#         if choice==1:
+#             print("Result of addition is:",fst+snd)
+#         if choice==2:
+#             print("Result of subtraction is:",fst-snd)
+#         if choice==3:
+#             print("Result of multiplication is:",fst*snd)
+#         if choice==4:
+#             if snd!=0:
+#                 print("Result of division is:",fst/snd)
+#             else:
+#                 print("Division cannot be done since the second number is zero")
+#     else:
+#         print("The choice entered is not valid")
+
+
+
+#Dictionary
+# d=dict()
+# name=input("Enter name: ")
+# address=input("Enter address: ")
+# phone=input("Enter phone number: ")
+# d['name']=name
+# d['address']=address
+# d['phone']=phone
+# print(len(d))
+
+
+
+#Enter values to dictionary using for loop
+# n=int(input("Enter the number of values to be inserted: "))
+# m=int(input("Enter the number of keys in each value: "))
+# d={}
+# num=1
+# x=0
+# for i in range(n):
+#     for j in range(m):
+#         nkey=input('Enter key: ')
+#         nvalue=input('Enter value: ')
+#         d[num,nkey]=nvalue
+#     num+=1
+# print(d)
+
+
+#Find length of words using dictionary comprehension
+# string=input("Enter the string: ")
+# word_len={word:len(word) for word in string.split()}
+# print('Word Length:',word_len)
+
+
+
+# Implement a Python program that takes a list of integers and returns a new list where each element is replaced by the sum of its digits. 
+# For example, [12, 34, 56] would become [3, 7, 11].
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=input("Enter element of array: ")
+#     x.append(arr)
+# print('The entered list is:',x)
+# res=[]
+# for i in x:
+#     numstr=str(i)
+#     digitsum=0
+#     for x in numstr:
+#         digitsum+=int(x)
+#     res.append(digitsum)
+# print('The result list is:',res)
+
+
+
+# Implement a Python program that calculates the cumulative sum of elements in a list. 
+# For example, given , the output should be [1, 3, 6, 10].
+# a=int(input("Enter size of array: "))
+# x=[]
+# for i in range(a):
+#     arr=input("Enter element of array: ")
+#     x.append(arr)
+# print('The entered list is:',x)
+# res = []
+# cum_sum = 0
+# for i in range(len(x)):
+#     cum_sum += x[i]
+#     res.append(cum_sum)
+# print(res)
+
+
+
+# Remove all characters from a string except integers.
+# a=input("Enter a string: ")
+# for i in a:
+#     if not i.isnumeric():
+#         a=a.replace(i,'')
+# print("The string after removing all the characters except integers is:",a)
+
+
+
+#Calculate the sum and average of the digits present in a string
+# a=input("Enter a string: ")
+# sum=0
+# length=0
+# for i in a:
+#     if i.isnumeric():
+#         length+=1
+#         sum+=int(i)
+# avg=sum/length
+# print("Sum of the numbers in the string is:",sum)
+# print("Average of the numbers in the string is:",avg)
+
+
+
+#Append new string in the middle of a given string
+# a=input("Enter a string: ")
+# x=input("Enter the string to be entered in the middle: ")
+# for i in range(len(a)):
+#     if i==len(a)//2:
+#         b=a[:i]+x+a[i:]
+# print(b)
+
+
+
+#ATM
+# acc=0
+# while True:
+#     print()
+#     print("Menu")
+#     print("1.Check Balance")
+#     print("2.Cash Deposit")
+#     print("3.Cash Withdrawal")
+#     print("4.Exit")
+#     choice=int(input("Enter your choice: "))
+#     if choice==1:
+#         print("Current account balance is:",acc)
+#     elif choice==2:
+#         dep=int(input("Enter the amount to be deposited: "))
+#         acc+=dep
+#         print("Amount deposited")
+#         print("Current account balance is:",acc)
+#     elif choice==3:
+#         wit=int(input("Enter the amount to be withdrawn: "))
+#         acc-=wit
+#         print("Amount withdrawn")
+#         print("Current account balance is:",acc)
+#     elif choice==4:
+#         break
+#     else:
+#         print("Invalid choice entered")
+
+
+
+#Create a string made of the first, middle and last character
+# str=input("Enter the string: ")
+# new_str=str[0]+str[len(str)//2]+str[-1]
+# print(new_str)
+
+
+
+#Write a Python program to sum all the items in a dictionary.
+# dict={}
+# dict['mark1']=10
+# dict['mark2']=20
+# dict['mark3']=20
+# dict['mark4']=30
+# dict['mark5']=15
+# print(dict)
+# sum=0
+# for i in dict.values():
+#     sum+=i
+# print("Sum of values=",sum)
+
+
+
+#Find smallest or largest number in a list (FUNCTION)
+# def largest(a):
+#     big=a[0]
+#     for i  in arr:
+#         if i>big:
+#             big=i
+#     print("Largest number in the list is:",big)
+
+# def scndlargest(a):
+#     big=a[0]
+#     for i in range(len(a)):
+#         for j in range(len(a)-i-1):
+#             if a[j]<a[j+1]:
+#                 a[j],a[j+1]=a[j+1],a[j]
+#     print("Second largest number in the list is:",a[1])
+
+# def scndsmallest(a):
+#     big=a[0]
+#     for i in range(len(a)):
+#         for j in range(len(a)-i-1):
+#             if a[j]<a[j+1]:
+#                 a[j],a[j+1]=a[j+1],a[j]
+#     print("Second smallest number in the list is:",a[-2])
+
+# def smallest(a):
+#     small=a[0]
+#     for i  in arr:
+#         if i<small:
+#             small=i
+#     print("Smallest number in the list is:",small)
+
+# a=int(input("Enter size of array: "))
+# arr=[]
+# small=0
+# for i in range(a):
+#     e=int(input("Enter element of array: "))
+#     arr.append(e)
+# print()
+# print("Menu")
+# print("1.Find largest number in the list")
+# print("2.Find smallest number in the list")
+# print("3.Find second largest number in the list")
+# print("4.Find second smallest number in the list")
+# print()
+# choice=int(input("Enter your choice: "))
+# if choice==1:
+#     largest(arr)
+# elif choice==2:
+#     smallest(arr)
+# elif choice==3:
+#     scndlargest(arr)
+# elif choice==4:
+#     scndsmallest(arr)
+
+
+
+
+# def func(l):
+#     res=[]
+#     for i in l:
+#         if len(i)>=2 and i[0].lower()=='c' and i[1].lower()=='a':
+#             res=res+[i]
+#     print("The names that begin with 'ca' are: ",res)
+
+# list=[]
+# n=int(input("Enter the no of elements in the list: "))
+# print("Enter the elements in the list:")
+# for i in range(n):
+#     e=input()
+#     list.append(e)
+# func(list)
+
+
+
+# Define a function that accepts lowercase words and returns uppercase words.
+# def l_ucase(w):
+#     print(w.upper())
+# w=input("Enter the word to be converted to uppercase: ")
+# l_ucase(w)
+
+
+
+# Define a function that accepts radius and returns the area of a circle.
+# def area(r):
+#     a=3.14159*r*r
+#     print("Area of the circle=",a,'m^2')
+# r=area(float(input("Enter the radius of the circle(in metres): ")))
+
+
+
+# Write a function check the nyear enetred is leap year or not
+# def leap(yr):
+#     if yr%4==0:
+#         print("The year",yr,"is a leap year")
+#     else:
+#         print("It is not a leap year")
+# yr=leap(int(input("Enter the year: ")))
+
+
+
+#Factorial using function recurssion
+# def fact(n):
+#     if n<2:
+#         return n
+#     else:
+#         return n*fact(n-1)
+# n=int(input("Enter the number whose factorial is to be calculated: "))
+# f=fact(n)
+# print(f)
+
+
+
+#Sum of values of dictionary using function
+# def s(**d):
+#     s=0
+#     for i in d.values():
+#         s+=i
+#     return s
+# sum=s(a=1,b=2,c=3)
+# print(sum)
+
+
+
+#Calculator using function
+# def add(a,b):
+#     s=a+b
+#     return s
+# def sub(a,b):
+#     su=a-b
+#     return su
+# def mult(a,b):
+#     m=a*b
+#     return m
+# def div(a,b):
+#     d=a/b
+#     return d
+# x=True
+# while x==True:
+#     print('Menu')
+#     print('1.Addition')
+#     print('2.Subtraction')
+#     print('3.Multiplication')
+#     print('4.Division')
+#     print('5.Exit')
+#     choice=int(input("Enter your choice: "))
+#     if 1<=choice<=4:
+#         fn=int(input("Enter the first number: "))
+#         sn=int(input("Enter the second number: "))
+#         if choice==1:
+#             s=add(fn,sn)
+#             print('Sum of the numbers is:',s)
+#         elif choice==2:
+#             su=sub(fn,sn)
+#             print('Difference of the numbers is:',su)
+#         elif choice==3:
+#             m=mult(fn,sn)
+#             print('Product of the numbers is:',m)
+#         elif choice==4:
+#             if sn!=0:
+#                 d=div(fn,sn)
+#                 print('Division of the numbers is:',d)
+#             else:
+#                 print("The second number entered is zero!")
+#     elif choice==5:
+#         print("Exiting the program")
+#         break
+#     else:
+#         print("The entered choice is invalid")
+#     yn = input("Do you want to continue(Y/N): ")
+#     if yn.lower()=='n':
+#         x = False
+#     elif yn.lower()=='y':
+#         x = True
+#     else:
+#         print("Invalid answer")
+
+
+
+#Password
+# for i in range(4):
+#     p=input("Enter the password: ")
+#     if p!='password':
+#         print("Invalid password")
+#     else:
+#         print("Unlocked")
+#         break
+#     if i==3:
+#         print("Too many wrong attempts, try again after 30 seconds")
+
+
+
+# l=['flower','flow']
+# r=''
+# min_len=len(l[0])
+# for i in l:
+#     if len(i)<min_len:
+#         min_len=len(i)
+# for i in range(min_len):
+#     for j in range(1,len(l)):
+#         if l[j][i]!=l[0][i]:
+#             break
+#     else:
+#             r+=l[0][i]
+# print(r)
+
+
+
+# f=open('file.txt','w')
+# f.writelines(['flower','flow'])
+# f=open(r"C:\Users\Govind\Desktop\Python\file.txt",'r')
+# print(f.read())
+# f.close()
+
+
+
+
+# str='aaabbbccc'
+# count=1
+# l=len(str)
+# for i in range(l-1):
+#     if str[i]==str[i+1]:
+#         count+=1
+#     elif str[i]!=str[i+1]:
+#         print(count,str[i],end=' ')
+#         count=1
+#     if i==(l-2):
+#         print(count,str[i],end=' ')
+#         count=1
+
+
+
+# class Car:
+#     company="BMW"
+#     model="m5"
+#     price=12030405
+#     color="black"
+#     def display_details():
+#         print("printing all details")
+# a=Car()
+# b=Car()
+
+
+
+# from py.file1 import add
+# v=add(3,80)
+# print(v)
+
+
+
+# Python program to create a class representing a Circle. Include methods to calculate its area and perimeter.
+# class Circle:
+#     def __init__(self,radius):
+#         self.radius=radius
+#     def area(self):
+#         ar=3.14*self.radius*self.radius
+#         print("Area= ",ar)
+#     def per(self):
+#         per=2*3.14*self.radius
+#         print("Perimeter= ",per)
+# r=int(input("Enter the radius of the circle: "))
+# c=Circle(r)
+# c.area()
+# c.per()
+
+
+
+# Python program to create a calculator class. Include methods for basic arithmetic operations
+# class Calculator:
+#     def __init__(self,num1,num2):
+#         self.num1=num1
+#         self.num2=num2
+#     def add(self):
+#         return self.num1+self.num2
+#     def sub(self):
+#         return self.num1-self.num2
+#     def multi(self):
+#         return self.num1*self.num2
+#     def div(self):
+#         return self.num1/self.num2
+# print("MENU")
+# print("1.Addition")
+# print("2.Subtraction")
+# print("3.Multiplication")
+# print("4.Division")
+# print("5.Exit")
+# ch=int(input("Enter your choice: "))
+# if 1<=ch<=4:
+#     num1=int(input("Enter first number: "))
+#     num2=int(input("Enter second number: "))
+#     if num2==0:
+#         print("Second number is zero")
+#     else:
+#         if ch==1:
+#             cal=Calculator(num1,num2)
+#             print("Sum of the numbers is:",cal.add())
+#         elif ch==2:
+#             cal=Calculator(num1,num2)
+#             print("Difference of the numbers is:",cal.sub())
+#         elif ch==3:
+#             cal=Calculator(num1,num2)
+#             print("Product of the numbers is:",cal.multi())
+#         elif ch==4:
+#             cal=Calculator(num1,num2)
+#             print("Division of the numbers is:",cal.div())
+# elif ch==5:
+#     exit
+# else:
+#     print("Invalid choice")
+
+
+
+# Python program to create a class that represents a shape. Include methods to calculate its area and perimeter. Implement subclasses for different shapes like circle, rectangle, and square.
+# class Shape:
+#     class Circle:
+#         def __init__(self,radius):
+#             self.radius=radius
+#         def area(self):
+#             return 3.14*self.radius**2
+#         def peri(self):
+#             return 2*3.14*self.radius
+#     class Square:
+#         def __init__(self,side):
+#             self.side=side
+#         def area(self):
+#             return self.side**2
+#         def peri(self):
+#             return 4*self.side
+#     class Rectangle:
+#         def __init__(self,l,b):
+#             self.l=l
+#             self.b=b
+#         def area(self):
+#             return self.l*self.b
+#         def peri(self):
+#             return 2*(self.l+self.b)
+# print("MENU")
+# print("1.Circle")
+# print("2.Square")
+# print("3.Rectangle")
+# ch=int(input("Enter your choice: "))
+# if 1<=ch<=3:
+#     if ch==1:
+#         r=int(input("Enter the radius of the circle:"))
+#         c=Shape.Circle(r)
+#         print("Area of the circle=",c.area())
+#         print("Perimeter of the circle=",c.peri())
+#     if ch==2:
+#         s=int(input("Enter the side length: "))
+#         sq=Shape.Square(s)
+#         print("Area of the square=",sq.area())
+#         print("Perimeter of the square=",sq.peri())
+#     if ch==3:
+#         l=int(input("Enter the length: "))
+#         b=int(input("Enter the breadth: "))
+#         re=Shape.Rectangle(l,b)
+#         print("Area of the square=",re.area())
+#         print("Perimeter of the square=",re.peri())
+# else:
+#     print("Invalid choice")
+
+
+
+# Python program to create a class representing a shopping cart. Include methods for adding and removing items, and calculating the total price.
+# class Cart:
+#     def __init__(self,item,p,n,num,r):
+#         self.item=item
+#         self.qp={}
+#         self.qp['Quantity']=n
+#         self.qp['Price']=p
+#         self.num=num
+#         self.r=r
+#     def add(self):
+#         for j in range(self.num):
+#             cart[self.item]=self.qp
+#         return cart
+#     def remove(self):
+#         del cart[self.r]
+#         return cart
+
+# x=True
+# while x==True:
+#     print("MENU")
+#     print("1.Add Item")
+#     print("2.Remove Item")
+#     ch=int(input("Enter your choice: "))
+#     total=0
+#     if 1<=ch<=2:
+#         if ch==1:
+#             cart={}
+#             num=int(input("Enter number of item to be added to the cart: "))
+#             for i in range(num):
+#                 item=input("Enter the item: ")
+#                 n=int(input("Enter the quantity of item: "))
+#                 p=int(input("Enter price of the item: "))
+#                 total+=p*n
+#                 a=Cart(item,p,n,num,0)
+#                 a.add()
+#             print("Current items in the cart are: ",a.add())
+#             print("Total price of the cart=",total)
+#         elif ch==2:
+#             print("Current items in the cart are: ",cart)
+#             for i in cart:
+#                 total=total+cart[i]['Quantity']*cart[i]['Price']
+#             print('Total price of the cart=',total)
+#             r=input("Enter item to be removed from the cart: ")
+#             total=total-(cart[r]['Quantity']*cart[r]['Price'])
+#             re=Cart(0,0,0,0,r)
+#             print("Remaining items in the cart are:",re.remove())
+#             print("Total price of the cart is: ",total)
+#     else:
+#         print("Invalid choice")
+#     yn=input('Do you want to continue(Y/N)?: ')
+#     if yn=='Y' or yn=='y':
+#         x=True
+#     elif yn=='N' or yn=='n':
+#         print('Exiting the program')
+#         x=False
+#     else:
+#         print('Invalid input, exiting the program')
+#         break
+
+
+
+# Python program to create a class representing a bank. Include methods for managing customer accounts and transactions.
+# class Bank:
+#     def __init__(self,name,accno,accbal,ndisp,w,d):
+#         self.name=name
+#         self.det={}
+#         self.accno=accno
+#         self.accbal=accbal
+#         self.ndisp=ndisp
+#         self.w=w
+#         self.d=d
+#         self.det['Account number']=self.accno
+#         self.det['Account balance']=self.accbal
+#     def add_det(self):
+#         bank[self.name]=self.det
+#     def display_det(self):
+#         for i in bank.keys():
+#             if i==self.name:
+#                 print("Account holder name: ",i.upper())
+#                 for j,k in bank[i].items():
+#                     print(j,':',k)
+#                 break
+#         else:
+#             print("The account holder does not exist")
+#     def cash_withdraw(self):
+#         for i in bank.keys():
+#             if i==self.name:
+#                 print("Cash withdrawn")
+#                 print("Remaining balance=",bank[i]['Account balance']-self.w)
+#     def cash_deposit(self):
+#         for i in bank.keys():
+#             if i==self.name:
+#                 print("Cash deposited")
+#                 print("Remaining balance=",bank[i]['Account balance']+self.d)
+
+# bank={}
+# x=True
+# while x==True:
+#     print("MENU")
+#     print("1.Enter new account details")
+#     print("2.Display account details")
+#     print("3.Transaction")
+#     ch=int(input("Enter your choice: "))
+#     if 1<=ch<=3:
+#         if ch==1:
+#             name=input("Enter account holder's name: ")
+#             accno=int(input("Enter account number: "))
+#             accbal=int(input("Enter account balance: "))
+#             add=Bank(name,accno,accbal,0,0,0)
+#             add.add_det()
+#             print("Details added successfully!")
+#         if ch==2:
+#             print("1.Display all accounts")
+#             print("2.Display a specific account")
+#             ch1=int(input("Enter your choice: "))
+#             if ch1==1:
+#                 print()
+#                 for i in bank.keys():
+#                     print("Acoount holder name:",i.upper())
+#                     for j,k in bank[i].items():
+#                         print(j,':',k)
+#             elif ch1==2:
+#                 ndisp=input("Enter name of account holder: ")
+#                 disp=Bank(ndisp,0,0,0,0,0)
+#                 disp.display_det()
+#         if ch==3:
+#             print("1.Cash withdrawal")
+#             print("2.Cash deposit")
+#             ch2=int(input("Enter your choice: "))
+#             n=input("Enter account holder name: ")
+#             print()
+#             if n in bank.keys():
+#                 if ch2==1:
+#                     print("Cash Withdrawal")
+#                     for i in bank.keys():
+#                         if i==n:
+#                             print("Current balance=",bank[i]['Account balance'])
+#                     w=int(input("Enter amount to be withdrawn: "))
+#                     print()
+#                     withdraw=Bank(n,0,0,0,w,0)   
+#                     withdraw.cash_withdraw()  
+#                 elif ch2==2:
+#                     print("Cash Deposit")
+#                     for i in bank.keys():
+#                         if i==n:
+#                             print("Current balance=",bank[i]['Account balance'])
+#                     d=int(input("Enter amount to be deposited: "))
+#                     print()
+#                     deposit=Bank(n,0,0,0,0,d)   
+#                     deposit.cash_deposit()
+#             else:
+#                 print("The account holder does not exist")
+#     else:
+#         print("Invalid choice")
+#     print()
+#     yn=input('Do you want to continue(Y/N)?: ')
+#     if yn=='Y' or yn=='y':
+#         x=True
+#     elif yn=='N' or yn=='n':
+#         print('Exiting the program')
+#         x=False
+#     else:
+#         print('Invalid input, exiting the program')
+#         break
