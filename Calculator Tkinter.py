@@ -49,48 +49,57 @@ def clear():
     e.delete(0,END)
 def one():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'1')
 def two():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'2')
 def three():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'3')
 def four():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'4')
 def five():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'5')
 def six():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'6')
 def seven():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'7')
 def eight():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'8')
 def nine():
     a=e.get()
-    if a[len(a)-1]=='0' and a[len(a)-2]==')':
-        e.delete(len(a)-1)
+    if len(a)>1:
+        if a[len(a)-1]=='0' and a[len(a)-2]==')':
+            e.delete(len(a)-1)
     e.insert(END,'9')
 def zero():
     a=e.get()
