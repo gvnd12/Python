@@ -7,6 +7,9 @@ w.resizable(width=False,height=False)
 w.title('Calculator')
 w.iconbitmap(r'Calculator Tkinter/Icon.ico')
 
+lab=Frame(background='white')
+lab.pack()
+
 ent=Frame(background='white')
 ent.pack()
 
@@ -29,17 +32,21 @@ def result():
                     if h!='':
                         for j in range(len(q)):
                             for k in q[j]:
-                                if k=='+' or k=='-' or k=='/':
+                                if k=='+' or k=='-' or k=='/' or k=='*':
                                     q[j]=str(eval(q[j]))
                 t='*'.join(q)
                 x[i]=t
         for l in range(len(x)):
             if len(x[l])>1:
-                if x[l][len(x[l])-1]=='*':
+                if x[l][len(x[l])-1]=='*' or x[l][len(x[l])-1]=='+' or x[l][len(x[l])-1]=='-' or x[l][len(x[l])-1]=='/':
                     x[l]=x[l].replace('*','')
         for p in x:
             if p=='':
                 x.remove(p)
+        # for i in range(len(x)):
+        #     if x[i][len(x[i])-1]=='+' or x[i][len(x[i])-1]=='-' or x[i][len(x[i])-1]=='*' or x[i][len(x[i])-1]=='/':
+        #         x[i]=x[i]+x[i+1]
+        # print(x)
         r='*'.join(x)
         res=eval(r)
         e.delete(0,END)
